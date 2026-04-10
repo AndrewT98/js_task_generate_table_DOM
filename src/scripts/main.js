@@ -358,3 +358,20 @@ const people = [
 console.log(people); // you can remove it
 
 // write your code here
+people.forEach((person) => {
+  const age = person.died - person.born;
+  const tr = document.createElement('tr');
+  const td = document.createElement('td');
+  td.textContent = person.name;
+  tr.appendChild(td);
+  const tdGender = document.createElement('td');
+  tdGender.textContent = person.gender;
+  tr.appendChild(tdGender);
+  const tdBorn = document.createElement('td');
+  tdBorn.textContent = person.born;
+  tr.appendChild(tdBorn);
+
+  const tdDied = document.createElement('td');
+  tdDied.textContent = person.died;
+  tr.appendChild(tdDied);
+  const tdAGE = 
